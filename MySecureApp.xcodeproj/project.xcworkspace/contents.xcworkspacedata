@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/slynch/Desktop/Biometric Authentication - Starter/MySecureApp.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

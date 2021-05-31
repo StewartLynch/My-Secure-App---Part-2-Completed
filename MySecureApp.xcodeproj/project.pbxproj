@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		BB051FD1266066490015DDB8 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB051FD0266066490015DDB8 /* UIApplication+Extension.swift */; };
 		BB55F82326604807007F939B /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB55F82226604807007F939B /* Credentials.swift */; };
 		BB73C2C8265F638C00434BF1 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB73C2C7265F638C00434BF1 /* APIService.swift */; };
+		BB7CD2872662D5AD00E3741E /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = BB7CD2862662D5AD00E3741E /* SwiftKeychainWrapper */; };
+		BB7CD2892662D65400E3741E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7CD2882662D65400E3741E /* KeychainStorage.swift */; };
 		BB831EE12662A80E00DADF6F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB831EE02662A80E00DADF6F /* LoginViewModel.swift */; };
 		BB831EE32662A9D700DADF6F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB831EE22662A9D700DADF6F /* LoginView.swift */; };
 		BB831EE52662AD2E00DADF6F /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB831EE42662AD2E00DADF6F /* Authentication.swift */; };
@@ -23,6 +25,7 @@
 		BB051FD0266066490015DDB8 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		BB55F82226604807007F939B /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		BB73C2C7265F638C00434BF1 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		BB7CD2882662D65400E3741E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		BB831EE02662A80E00DADF6F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BB831EE22662A9D700DADF6F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BB831EE42662AD2E00DADF6F /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -39,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7CD2872662D5AD00E3741E /* SwiftKeychainWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +72,7 @@
 			children = (
 				BB73C2C7265F638C00434BF1 /* APIService.swift */,
 				BB051FD0266066490015DDB8 /* UIApplication+Extension.swift */,
+				BB7CD2882662D65400E3741E /* KeychainStorage.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			);
 			name = MySecureApp;
 			packageProductDependencies = (
+				BB7CD2862662D5AD00E3741E /* SwiftKeychainWrapper */,
 			);
 			productName = "Biometrict Authentication*";
 			productReference = BB90CEA2265EDA16002BB79E /* MySecureApp.app */;
@@ -157,6 +163,7 @@
 			);
 			mainGroup = BB90CE99265EDA16002BB79E;
 			packageReferences = (
+				BB7CD2852662D5AD00E3741E /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = BB90CEA3265EDA16002BB79E /* Products */;
 			projectDirPath = "";
@@ -192,6 +199,7 @@
 				BB73C2C8265F638C00434BF1 /* APIService.swift in Sources */,
 				BB90CEA6265EDA16002BB79E /* MySecureApp_App.swift in Sources */,
 				BB831EE52662AD2E00DADF6F /* Authentication.swift in Sources */,
+				BB7CD2892662D65400E3741E /* KeychainStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +388,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BB7CD2852662D5AD00E3741E /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB7CD2862662D5AD00E3741E /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB7CD2852662D5AD00E3741E /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB90CE9A265EDA16002BB79E /* Project object */;
 }
